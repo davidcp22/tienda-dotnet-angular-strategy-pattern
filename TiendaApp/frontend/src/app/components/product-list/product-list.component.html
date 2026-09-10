@@ -1,0 +1,27 @@
+<div class="product-grid">
+  <div class="product-card" *ngFor="let p of productos">
+    <div class="product-header">
+      <span class="sku">{{ p.sku }}</span>
+      <span class="badge">{{ tipoProducto(p.sku) }}</span>
+    </div>
+    <h3>{{ p.nombre }}</h3>
+    <p class="descripcion">{{ p.descripcion }}</p>
+    <p class="precio">
+      ${{ p.precioUnitario | number: '1.2-2' }}
+      <span *ngIf="p.sku.startsWith('WE')">/ g</span>
+    </p>
+    <p class="disponibilidad">Disponibles: {{ p.unidadesDisponibles }}</p>
+
+    <div class="agregar-row">
+      <input
+        type="number"
+        min="0.01"
+        step="0.01"
+        [ngModel]="cantidadPara(p.sku)"
+        (ngModelChange)="actualizarCantidad(p.sku, $event)"
+      />
+      <span class="unidad">{{ p.sku.startsWith('WE') ? 'kg' : 'uds' }}</span>
+      <button (click)="agregar(p)">Agregar</button>
+    </div>
+  </div>
+</div>

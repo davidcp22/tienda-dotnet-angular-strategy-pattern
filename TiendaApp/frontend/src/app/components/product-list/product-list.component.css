@@ -1,0 +1,89 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.sku {
+  font-size: 12px;
+  color: #7b8794;
+  font-weight: 600;
+}
+
+.badge {
+  font-size: 11px;
+  background: #e3f2fd;
+  color: #1565c0;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+h3 {
+  margin: 4px 0;
+  font-size: 16px;
+}
+
+.descripcion {
+  font-size: 13px;
+  color: #616e7c;
+  min-height: 36px;
+}
+
+.precio {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b6e4f;
+  margin: 6px 0 0;
+}
+
+.disponibilidad {
+  font-size: 12px;
+  color: #9aa5b1;
+  margin: 2px 0 12px;
+}
+
+.agregar-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.agregar-row input {
+  width: 64px;
+  padding: 6px;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+}
+
+.unidad {
+  font-size: 12px;
+  color: #616e7c;
+}
+
+.agregar-row button {
+  margin-left: auto;
+  background: #1565c0;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.agregar-row button:hover {
+  background: #0e4c8c;
+}

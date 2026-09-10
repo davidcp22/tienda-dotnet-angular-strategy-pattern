@@ -1,0 +1,21 @@
+<header>
+  <h1>Tienda App</h1>
+</header>
+
+<div *ngIf="error" class="error-banner">{{ error }}</div>
+
+<main>
+  <section class="productos">
+    <h2>Catálogo</h2>
+    <app-product-list [productos]="productos" (agregarAlCarrito)="onAgregarAlCarrito($event)"></app-product-list>
+  </section>
+
+  <aside class="carrito-panel">
+    <app-cart
+      [carrito]="carrito"
+      [mensajeCompra]="mensajeCompra"
+      (eliminarItem)="onEliminarItem($event)"
+      (finalizarCompra)="onFinalizarCompra()"
+    ></app-cart>
+  </aside>
+</main>
