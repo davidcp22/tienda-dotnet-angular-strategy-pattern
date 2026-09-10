@@ -90,16 +90,4 @@ La app queda en `http://localhost:4200` y consume la API en `http://localhost:50
 | DELETE | `/api/usuarios/{usuarioId}/carrito/items/{itemId}`  | Quitar ítem                     |
 | POST   | `/api/usuarios/{usuarioId}/carrito/finalizar`       | Concretar la compra             |
 
-## Para el video de entrega
 
-Puntos sugeridos a cubrir (según la rúbrica del enunciado):
-
-1. Repaso rápido del diagrama de clases del OVA y cómo se mapea a las carpetas
-   `Models/` y `Reglas/`.
-2. Demo en vivo: agregar productos de los 3 tipos al carrito y mostrar cómo cambia el
-   cálculo (normal, por peso, descuento escalonado).
-3. Mostrar cómo se agregaría una **cuarta regla de precio** (ej. "2x1") sin modificar
-   `Item`, `Carrito`, `Tienda` ni `ManejadorReglas` — solo una clase nueva + una línea en
-   `Program.cs`. Esa es la prueba de que el diseño OO cumplió su propósito.
-4. Conclusión personal: ¿el diseño OO valió la pena en una app web moderna (REST +
-   SPA), donde el "transporte" no es orientado a objetos? Ventajas y costos observados.
